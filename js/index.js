@@ -95,3 +95,17 @@ contactInfo.forEach(
 // Footer
 let footer = document.querySelector("footer > p");
 footer.textContent = siteContent["footer"]["copyright"];
+
+// Task 3, adding new content
+
+let nav = document.querySelector("nav");
+let a = document.createElement("a");
+nav.prepend(a);
+nav.appendChild(a);
+document.querySelector("a").textContent = "NewNavItem";
+nav.lastChild.textContent = "OtherNewNavItem";
+
+// * Note, placing the following color feature above the added nav items in this script results in the last nav item staying grey
+
+let navText = document.querySelectorAll("header nav > *");
+navText.forEach(navItem => (navItem.style.color = "green"));
